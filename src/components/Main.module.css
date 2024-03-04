@@ -1,0 +1,104 @@
+.h1 {
+  font-size: 195px;
+  font-family: "VanguardCF";
+  color: #d9d9d901;
+  -webkit-text-stroke: 1px #ffffff33;
+  text-align: center;
+  letter-spacing: -3px;
+}
+
+.h2 {
+  font-size: 23px;
+  font-family: "MonumentExtended";
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  text-shadow: 0px 0px 19px #f299af;
+  background: linear-gradient(to right, #ade3fd, #c199ff, #c199ff, #ff9a9a);
+  color: transparent;
+  background-clip: text;
+  letter-spacing: 11px;
+  word-spacing: 11px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.mainHeadings {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 169px;
+  font-family: "VanguardCF";
+  color: white;
+  line-height: 1;
+  margin-top: -2rem;
+  word-spacing: 11rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.asad {
+  height: 37rem;
+  position: absolute;
+  top: -17rem;
+}
+
+.checkGlow {
+  position: absolute;
+  z-index: -999999999;
+  top: -37rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  position: absolute;
+  top: 0;
+  left: 70px;
+  transform: translateY(-50%);
+}
+
+.link:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 8px #f299af);
+  transition: 300ms;
+}
+
+.mainBtn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: linear-gradient(to right, #ade3fd, #c199ff, #c199ff, #ff9a9a);
+  padding: 15px 25px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #0b0c13;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}
+
+.mainBtn:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 22px #f299af63;
+  transition: 700ms;
+}

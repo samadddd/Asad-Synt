@@ -1,0 +1,50 @@
+.nav {
+  display: flex;
+  margin: 45px 70px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  color: white;
+  align-items: center;
+}
+
+.active {
+  font-weight: 700;
+  background: linear-gradient(to right, #ade3fd, #c199ff, #c199ff, #ff9a9a);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px 19px #f299af;
+  cursor: pointer;
+}
+
+.li:hover {
+  font-weight: 700;
+  background: linear-gradient(to right, #ade3fd, #c199ff, #c199ff, #ff9a9a);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px 19px #f299af;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.button {
+  background: linear-gradient(to right, #ade3fd, #c199ff, #c199ff, #ff9a9a);
+  padding: 16px 50px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #0b0c13;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 22px #f299af63;
+}
+
+.span {
+  margin-left: 6px;
+}
