@@ -38,6 +38,7 @@ function PortfolioPage() {
               alt={`Portfolio ${index}`}
               role="button"
               className="w-full"
+              loading="lazy"
             />
           </div>
         ))}

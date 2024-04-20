@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Button from "./Button";
 
-function Navbar() {
+function Navbar({ setShowMenu }) {
   function scroller(id) {
     const section = document.getElementById(id);
     section.scrollIntoView({ behavior: "smooth" });
@@ -14,6 +14,7 @@ function Navbar() {
         alt="Menu"
         className="block lg:hidden w-[3vw]"
         role="button"
+        onClick={() => setShowMenu(true)}
       />
       <div className="hidden lg:flex gap-16">
         <ul className="flex items-center gap-10 text-paragraph">

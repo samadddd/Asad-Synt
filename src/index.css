@@ -48,6 +48,7 @@ html {
 body {
   background-color: #0b0c13;
   font-family: "Inter";
+  overflow-x: hidden;
 }
 
 button {
@@ -206,6 +207,20 @@ button {
 .icon_hover:hover {
   filter: drop-shadow(0 0 10px #f299af);
   transition: 300ms;
+}
+
+.menu_link {
+  font-family: "Vanguard";
+  font-size: 50px;
+  -webkit-text-stroke: 1px #9f9fa2;
+  color: transparent;
+}
+
+.menu_link:hover {
+  background: var(--gradientBg);
+  background-clip: text;
+  -webkit-text-stroke: transparent;
+  text-shadow: 0 0 20px #f299af65;
 }
 
 @keyframes loading {

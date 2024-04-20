@@ -61,20 +61,26 @@ function Hero() {
 
         <div className="flex justify-around">
           <div className="scale-[0.5] 600:scale-[0.6] md:scale-[0.8] lg:scale-[1] z-10">
-            <Button type="secondary" onClick={()=>scroller('portfolio')}>View Portfolio</Button>
+            <Button type="secondary" onClick={() => scroller("portfolio")}>
+              View Portfolio
+            </Button>
           </div>
           <img
             src="asad.svg"
             alt="Asad Synt"
             className="absolute translate-y-[-34%] w-[58vw]"
+            loading="eager"
           />
           <img
             src="glow.svg"
             alt="Glow"
             className="absolute -translate-y-1/2 -z-10"
+            loading="eager"
           />
           <div className="scale-[0.5] 600:scale-[0.6] md:scale-[0.8] lg:scale-[1] z-10">
-            <Button type="secondary" onClick={()=>scroller('contact')}>Get in touch</Button>
+            <Button type="secondary" onClick={() => scroller("contact")}>
+              Get in touch
+            </Button>
           </div>
         </div>
       </div>

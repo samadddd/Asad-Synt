@@ -2,34 +2,64 @@ import toast from "react-hot-toast";
 import Button from "../ui/Button";
 import SectionHeading from "../ui/SectionHeading";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 function Contact() {
   const [hoveredImg, setHoveredImg] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = async (data) => {
+    setIsSubmitting(true);
+    const res = await fetch(
+      "https://sheet.best/api/sheets/147d0fc1-694d-46a7-8fab-f8baa0d92f2d",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+    setIsSubmitting(false);
+    reset();
+    if (res.status === 200) {
+      return toast.success("Soon you'll be contacted!");
+    }
+    return toast.error("Something went wrong!");
+  };
   return (
     <section className="mt-48" id="contact">
       <SectionHeading vanguard="CONTACT ME">SEND ME EMAIL</SectionHeading>
       <img
         src="glow.svg"
         alt="Glow"
-        className="absolute left-0 translate-x-[-60%] translate-y-[-35%] opacity-70 block lg:hidden"
+        className="absolute left-0 translate-x-[-60%] translate-y-[-35%] opacity-70 block lg:hidden -z-10"
       />
       <img
         src="glow.svg"
         alt="Glow"
-        className="absolute right-0 translate-x-[60%] translate-y-[-35%] opacity-70 block lg:hidden"
+        className="absolute right-0 translate-x-[60%] translate-y-[-35%] opacity-70 block lg:hidden -z-10"
       />
-      <form>
+      {isSubmitting && (
+        <div className="h-[4px] w-screen z-40 fixed top-0 loading_bar"></div>
+      )}
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col m-auto max-w-fit px-[6vw]">
           <div className="flex gap-7">
             <input
               type="text"
               placeholder="First Name"
               className="input_custom"
+              id="first_name"
+              {...register("first_name", { required: true })}
             />
             <input
               type="text"
               placeholder="Last Name"
               className="input_custom"
+              id="last_name"
+              {...register("last_name", { required: true })}
             />
           </div>
 
@@ -37,11 +67,15 @@ function Contact() {
             type="email"
             placeholder="Email"
             className="input_custom mt-11"
+            id="email"
+            {...register("email", { required: true })}
           />
           <input
             type="text"
             placeholder="Message"
             className="input_custom mt-11"
+            id="message"
+            {...register("message", { required: true })}
           />
         </div>
         <div className="flex justify-center mt-11 scale-[0.8] 600:scale-[1] ">
