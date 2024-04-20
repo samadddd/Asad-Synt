@@ -1,0 +1,258 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter/Inter-Regular-400.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url("fonts/Monument/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vanguard";
+  src: url("fonts/Vanguard/Fontspring-DEMO-vanguardcf-heavy.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --gradientBg: linear-gradient(to right, #ade3fd, #c199ff, #e698c3, #ff9a9a);
+  --darkBg: #0b0c13;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ade3fd, #c199ff, #e698c3, #ff9a9a);
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0b0c13;
+  font-family: "Inter";
+}
+
+button {
+  z-index: 2;
+  outline: none;
+}
+
+.active {
+  background: var(--gradientBg);
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  text-shadow: 0 0 19px #f299af;
+}
+
+.active:hover {
+  text-decoration: none;
+}
+
+.asad_synt {
+  word-spacing: 16vw;
+}
+
+.box_shadow {
+  box-shadow: 0 0 18px #e698c359;
+}
+
+.btn_primary {
+  background: var(--gradientBg);
+  border-radius: 8px;
+  padding: 1rem 3.0625rem; /* 49px */
+}
+
+.btn_primary:hover {
+  box-shadow: 0 0 22px #f299af73;
+  transition: box-shadow 0.3s;
+}
+
+.btn_primary_label {
+  color: black;
+  font-weight: 500;
+}
+
+.btn_secondary {
+  background: none;
+  border: none;
+  display: flex;
+  padding: 1rem 3.0625rem; /* 49px */
+  position: relative;
+}
+
+.btn_secondary::after {
+  background: var(--gradientBg);
+  border: 1px solid transparent;
+  border-image: var(--gradientBg) 1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  content: "";
+  height: 100%;
+  left: 0;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.btn_secondary_label {
+  background: var(--gradientBg);
+  background-clip: text;
+  border: none;
+  color: transparent;
+  font-weight: 500;
+}
+
+.divider-x {
+  border-right: 1px solid #4b4b4b;
+  height: 50px;
+  left: 50%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+}
+
+.hover_li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.input_custom {
+  background: none;
+  border-bottom: 1px solid #3c3d42;
+  color: #9f9fa2;
+  outline: none;
+  padding: 0.625rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.input_custom::placeholder {
+  color: #3c3d42;
+  text-align: center;
+}
+
+.input_custom:focus {
+  border-bottom: 1px solid #9f9fa2;
+}
+
+.slides {
+  animation: animateLeft 100s linear infinite;
+}
+
+.slides:hover {
+  animation-play-state: paused;
+}
+
+.stat_number {
+  background: var(--gradientBg);
+  background-clip: text;
+  color: transparent;
+  font-family: "Monument";
+  font-size: 34px;
+  text-shadow: 0 0 19px #f299af;
+}
+
+.stat_para {
+  color: rgb(159, 159, 162);
+  line-height: 20px;
+  max-width: 19rem;
+  text-align: center;
+}
+
+.stat_title {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+}
+
+.testimonial_slides {
+  animation: animateRight 50s linear infinite reverse;
+}
+
+.text_shadow_custom {
+  text-shadow: 0 0 19px #f299af;
+}
+
+.icon_hover:hover {
+  filter: drop-shadow(0 0 10px #f299af);
+  transition: 300ms;
+}
+
+@media (max-width: 1023px) {
+  .divider-x {
+    display: none;
+  }
+  .slides {
+    animation-play-state: paused;
+  }
+  .testimonial_slides {
+    animation: none;
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 600px) {
+  .monument {
+    font-size: calc(1.2vw + 0.8rem);
+  }
+  .stat_number {
+    font-size: 24px;
+  }
+  .stat_para {
+    font-size: 14px;
+  }
+  .stat_title {
+    font-size: 16px;
+  }
+  .vanguard {
+    font-size: calc(11vw + 2rem);
+  }
+}
+
+@keyframes animateLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-434px * 15));
+  }
+}
+
+@keyframes animateRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-443px * 8));
+  }
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
