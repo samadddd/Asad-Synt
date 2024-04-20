@@ -33,7 +33,7 @@ export default {
       const newUtilities = {
         ".stroke": {
           "-webkit-text-stroke-width": "1px",
-          "-webkit-text-stroke-color": '#FFFFFF33'
+          "-webkit-text-stroke-color": "#FFFFFF33",
         },
         ".ml_custom": {
           "margin-left": "calc(4vw + 1rem)",

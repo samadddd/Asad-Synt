@@ -28,7 +28,7 @@ const statsData = [
 
 function About() {
   return (
-    <section className="mx_custom relative mt-[555px]" id="about">
+    <section className="mx_custom relative mt-[45vw]" id="about">
       <SectionHeading vanguard="ABOUT ME">WHO AM I?</SectionHeading>
       <div className="flex justify-center">
         <img
