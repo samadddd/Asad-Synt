@@ -195,6 +195,10 @@ button {
   animation: animateRight 50s linear infinite reverse;
 }
 
+.testimonial_slides:hover {
+  animation-play-state: paused;
+}
+
 .text_shadow_custom {
   text-shadow: 0 0 19px #f299af;
 }
@@ -202,6 +206,36 @@ button {
 .icon_hover:hover {
   filter: drop-shadow(0 0 10px #f299af);
   transition: 300ms;
+}
+
+@keyframes loading {
+  0% {
+    background-color: #ade3fd;
+  }
+  33% {
+    background-color: #c199ff;
+  }
+  66% {
+    background-color: #e698c3;
+  }
+  100% {
+    background-color: #ff9a9a;
+  }
+}
+
+.loading_bar {
+  transition: 1s;
+  animation: loading 1s linear infinite;
+  box-shadow: 0 0 20px #f299af;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 1023px) {

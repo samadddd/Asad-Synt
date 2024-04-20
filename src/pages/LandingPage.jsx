@@ -1,11 +1,13 @@
-import About from "../sections/About";
-import Faq from "../sections/Faq";
+import { lazy } from "react";
+
 import Hero from "../sections/Hero";
-import Portfolio from "../sections/Portfolio";
-import Testimonials from "../sections/Testimonials";
 import Navbar from "../ui/Navbar";
-import Contact from "../sections/Contact";
-import Footer from "../sections/Footer";
+const About = lazy(() => import("../sections/About"));
+const Portfolio = lazy(() => import("../sections/Portfolio"));
+const Testimonials = lazy(() => import("../sections/Testimonials"));
+const Faq = lazy(() => import("../sections/Faq"));
+const Contact = lazy(() => import("../sections/Contact"));
+const Footer = lazy(() => import("../sections/Footer"));
 
 function LandinPage() {
   return (

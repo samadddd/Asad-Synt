@@ -2,6 +2,10 @@ import { useState } from "react";
 import Button from "../ui/Button";
 function Hero() {
   const [hoveredImg, setHoveredImg] = useState(null);
+  function scroller(id) {
+    const section = document.getElementById(id);
+    section.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <header>
       {/* MAIN HEADING */}
@@ -57,7 +61,7 @@ function Hero() {
 
         <div className="flex justify-around">
           <div className="scale-[0.5] 600:scale-[0.6] md:scale-[0.8] lg:scale-[1] z-10">
-            <Button type="secondary">View Portfolio</Button>
+            <Button type="secondary" onClick={()=>scroller('portfolio')}>View Portfolio</Button>
           </div>
           <img
             src="asad.svg"
@@ -70,7 +74,7 @@ function Hero() {
             className="absolute -translate-y-1/2 -z-10"
           />
           <div className="scale-[0.5] 600:scale-[0.6] md:scale-[0.8] lg:scale-[1] z-10">
-            <Button type="secondary">Get in touch</Button>
+            <Button type="secondary" onClick={()=>scroller('contact')}>Get in touch</Button>
           </div>
         </div>
       </div>

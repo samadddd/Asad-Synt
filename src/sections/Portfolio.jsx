@@ -9,6 +9,7 @@ const fakeData = new Array(30)
       `./fakeData/portfolio${index > 14 ? (index = index - 14) : index + 1}.svg`
   );
 function Portfolio() {
+
   return (
     <section className="mt-64" id="portfolio">
       <SectionHeading vanguard="PORTFOLIO">UI/UX DESIGNING</SectionHeading>
