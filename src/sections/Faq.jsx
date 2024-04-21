@@ -34,14 +34,18 @@ function Faq() {
   return (
     <section className="relative mt-80">
       <SectionHeading vanguard="F.A.Q">FREQ. ASKED QUES.</SectionHeading>
-      <img src="glow.svg" alt="Glow" className="absolute left-[-45rem] top-0" />
       <img
-        src="glow.svg"
+        src="glow.webp"
+        alt="Glow"
+        className="absolute left-[-45rem] top-0"
+      />
+      <img
+        src="glow.webp"
         alt="Glow"
         className="absolute right-[-45rem] top-0"
       />
       <img
-        src="glow.svg"
+        src="glow.webp"
         alt="Glow Effect"
         className="block lg:hidden absolute -z-10 left-1/2 -translate-x-1/2 translate-y-[-40%] opacity-65"
       />

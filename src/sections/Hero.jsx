@@ -27,36 +27,46 @@ function Hero() {
       <div className="mt-0 md:mt-8">
         {/* ICONS */}
         <div className="absolute hidden md:flex flex-col gap-[35px] -translate-y-1/2 ml_custom">
-          <img
-            src={
-              hoveredImg === "instagram"
-                ? "instagram-hover.svg"
-                : "instagram.svg"
-            }
-            alt="Instagram"
-            role="button"
-            className="opacity-45 hover:opacity-100 icon_hover"
-            onMouseOver={() => setHoveredImg("instagram")}
-            onMouseLeave={() => setHoveredImg(null)}
-          />
-          <img
-            src={hoveredImg === "dribble" ? "dribble-hover.svg" : "dribble.svg"}
-            alt="Dribble"
-            role="button"
-            className="opacity-45 hover:opacity-100 icon_hover "
-            onMouseOver={() => setHoveredImg("dribble")}
-            onMouseLeave={() => setHoveredImg(null)}
-          />
-          <img
-            src={
-              hoveredImg === "linkedin" ? "linkedin-hover.svg" : "linkedin.svg"
-            }
-            alt="Linked In"
-            role="button"
-            className="opacity-45 hover:opacity-100 icon_hover  "
-            onMouseOver={() => setHoveredImg("linkedin")}
-            onMouseLeave={() => setHoveredImg(null)}
-          />
+          <a href="https://www.instagram.com/asadsynt/">
+            <img
+              src={
+                hoveredImg === "instagram"
+                  ? "instagram-hover.svg"
+                  : "instagram.svg"
+              }
+              alt="Instagram"
+              role="button"
+              className="opacity-45 hover:opacity-100 icon_hover"
+              onMouseOver={() => setHoveredImg("instagram")}
+              onMouseLeave={() => setHoveredImg(null)}
+            />
+          </a>
+          <a href="https://dribbble.com/AsadSynt/">
+            <img
+              src={
+                hoveredImg === "dribble" ? "dribble-hover.svg" : "dribble.svg"
+              }
+              alt="Dribble"
+              role="button"
+              className="opacity-45 hover:opacity-100 icon_hover "
+              onMouseOver={() => setHoveredImg("dribble")}
+              onMouseLeave={() => setHoveredImg(null)}
+            />
+          </a>
+          <a href="https://pk.linkedin.com/in/asadsynt">
+            <img
+              src={
+                hoveredImg === "linkedin"
+                  ? "linkedin-hover.svg"
+                  : "linkedin.svg"
+              }
+              alt="Linked In"
+              role="button"
+              className="opacity-45 hover:opacity-100 icon_hover  "
+              onMouseOver={() => setHoveredImg("linkedin")}
+              onMouseLeave={() => setHoveredImg(null)}
+            />
+          </a>
         </div>
 
         <div className="flex justify-around">
@@ -66,13 +76,13 @@ function Hero() {
             </Button>
           </div>
           <img
-            src="asad.svg"
+            src="asad.webp"
             alt="Asad Synt"
             className="absolute translate-y-[-34%] w-[58vw]"
             loading="eager"
           />
           <img
-            src="glow.svg"
+            src="glow.webp"
             alt="Glow"
             className="absolute -translate-y-1/2 -z-10"
             loading="eager"

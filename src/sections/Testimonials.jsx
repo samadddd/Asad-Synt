@@ -78,7 +78,7 @@ function Testimonials() {
     <section className="mt-60 relative">
       <SectionHeading vanguard="TESTIMONIALS">WHAT CLIENT SAYS?</SectionHeading>
       <img
-        src="glow.svg"
+        src="glow.webp"
         alt="Glow Effect"
         className="absolute -z-10 left-1/2 -translate-x-1/2 translate-y-[-40%] "
       />

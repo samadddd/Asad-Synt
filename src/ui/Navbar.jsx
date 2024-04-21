@@ -7,8 +7,10 @@ function Navbar({ setShowMenu }) {
     section.scrollIntoView({ behavior: "smooth" });
   }
   return (
-    <nav className="mx_custom my-[30px] flex justify-between">
-      <img src="logo.svg" alt="Logo" className="w-[10vw]" />
+    <nav className="mx_custom my-[30px] flex justify-between ">
+      <div className="flex items-center">
+        <img src="logo.webp" alt="Logo" className="w-[10vw]" />
+      </div>
       <img
         src="hamburger.svg"
         alt="Menu"

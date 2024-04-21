@@ -4,30 +4,30 @@ import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
 
 function PortfolioPage() {
-  const fakeData = new Array(30)
+  const fakeData = new Array(20)
     .fill(undefined)
     .map(
       (_, index) =>
-        `./fakeData/portfolio${index > 14 ? (index = index - 14) : index + 1}.svg`
+        `./fakeData/${index >= 10 ? (index = index - 9) : index + 1}-thumb.webp`
     );
   return (
     <>
       <Navbar />
       <SectionHeading vanguard="PORTFOLIO">UI/UX DESIGNING</SectionHeading>
       <img
-        src="glow.svg"
+        src="glow.webp"
         alt="Glow"
-        className="absolute left-0 translate-x-[-60%] translate-y-[-35%] opacity-70 "
+        className="absolute left-0 translate-x-[-60%] translate-y-[-35%] opacity-70 -z-10 "
       />
       <img
-        src="glow.svg"
+        src="glow.webp"
         alt="Glow"
-        className="absolute right-0 translate-x-[60%] translate-y-[-35%] opacity-70 "
+        className="absolute right-0 translate-x-[60%] translate-y-[-35%] opacity-70  -z-10"
       />
       <hr className="border-none h-[1px] bg-[#3c3d42] my-14 mx_custom" />
       <div className="grid grid-cols-2 lg:grid-cols-3 mx_custom gap-[3vw] relative">
         <img
-          src="glow.svg"
+          src="glow.webp"
           alt="Glow Center"
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10"
         />
@@ -37,7 +37,7 @@ function PortfolioPage() {
               src={imgSrc}
               alt={`Portfolio ${index}`}
               role="button"
-              className="w-full"
+              className="w-full rounded-lg"
               loading="lazy"
             />
           </div>

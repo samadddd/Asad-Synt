@@ -2,23 +2,23 @@ import { Link } from "react-router-dom";
 import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
 
-const fakeData = new Array(30)
+const fakeData = new Array(20)
   .fill(undefined)
   .map(
     (_, index) =>
-      `./fakeData/portfolio${index > 14 ? (index = index - 14) : index + 1}.svg`
+      `./fakeData/${index >= 10 ? (index = index - 9) : index + 1}-thumb.webp`
   );
 function Portfolio() {
   return (
     <section className="mt-64" id="portfolio">
       <SectionHeading vanguard="PORTFOLIO">UI/UX DESIGNING</SectionHeading>
       <img
-        src="glow.svg"
+        src="glow.webp"
         alt="Glow Effect"
         className="absolute left-1/2 -translate-x-1/2 translate-y-[-40%] -z-10"
       />
       <div className="lg:overflow-hidden mt-0 md:mt-12 overflow-scroll slider">
-        <div className="flex slides">
+        <div className="flex overflow-x-scroll">
           {fakeData.map((imageSrc, index) => {
             return (
               <div
@@ -30,6 +30,7 @@ function Portfolio() {
                     src={imageSrc}
                     alt={`Portfolio ${index}`}
                     loading="lazy"
+                    className="rounded-lg"
                   />
                 </Link>
               </div>
@@ -37,11 +38,14 @@ function Portfolio() {
           })}
         </div>
       </div>
-      <div className="flex justify-center mt-16 scale-[0.8] 600:scale-[1] ">
+      <Link
+        to="/portfolio"
+        className="flex justify-center mt-16 scale-[0.8] 600:scale-[1] "
+      >
         <Button type="secondary" size="mid">
           Check all UI/UX Designs
         </Button>
-      </div>
+      </Link>
     </section>
   );
 }

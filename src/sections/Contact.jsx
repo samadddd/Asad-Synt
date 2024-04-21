@@ -32,12 +32,12 @@ function Contact() {
     <section className="mt-48" id="contact">
       <SectionHeading vanguard="CONTACT ME">SEND ME EMAIL</SectionHeading>
       <img
-        src="glow.svg"
+        src="glow.webp"
         alt="Glow"
         className="absolute left-0 translate-x-[-60%] translate-y-[-35%] opacity-70 block lg:hidden -z-10"
       />
       <img
-        src="glow.svg"
+        src="glow.webp"
         alt="Glow"
         className="absolute right-0 translate-x-[60%] translate-y-[-35%] opacity-70 block lg:hidden -z-10"
       />
@@ -85,36 +85,46 @@ function Contact() {
       <hr className="border-none h-[1px] bg-[#3c3d42] my-[50px] w-16 mx-auto" />
       <div className="flex flex-col items-center gap-7">
         <div className="flex gap-9">
-          <img
-            src={
-              hoveredImg === "instagram"
-                ? "instagram-hover.svg"
-                : "instagram.svg"
-            }
-            alt="Instagram"
-            role="button"
-            className="opacity-45 hover:opacity-100 icon_hover size-5 600:size-6"
-            onMouseOver={() => setHoveredImg("instagram")}
-            onMouseLeave={() => setHoveredImg(null)}
-          />
-          <img
-            src={hoveredImg === "dribble" ? "dribble-hover.svg" : "dribble.svg"}
-            alt="Dribble"
-            role="button"
-            className="opacity-45 hover:opacity-100 icon_hover size-5 600:size-6 "
-            onMouseOver={() => setHoveredImg("dribble")}
-            onMouseLeave={() => setHoveredImg(null)}
-          />
-          <img
-            src={
-              hoveredImg === "linkedin" ? "linkedin-hover.svg" : "linkedin.svg"
-            }
-            alt="Linked In"
-            role="button"
-            className="opacity-45 hover:opacity-100 icon_hover size-5 600:size-6  "
-            onMouseOver={() => setHoveredImg("linkedin")}
-            onMouseLeave={() => setHoveredImg(null)}
-          />
+          <a href="https://www.instagram.com/asadsynt/">
+            <img
+              src={
+                hoveredImg === "instagram"
+                  ? "instagram-hover.svg"
+                  : "instagram.svg"
+              }
+              alt="Instagram"
+              role="button"
+              className="opacity-45 hover:opacity-100 icon_hover size-5 600:size-6"
+              onMouseOver={() => setHoveredImg("instagram")}
+              onMouseLeave={() => setHoveredImg(null)}
+            />
+          </a>
+          <a href="https://dribbble.com/AsadSynt/about">
+            <img
+              src={
+                hoveredImg === "dribble" ? "dribble-hover.svg" : "dribble.svg"
+              }
+              alt="Dribble"
+              role="button"
+              className="opacity-45 hover:opacity-100 icon_hover size-5 600:size-6 "
+              onMouseOver={() => setHoveredImg("dribble")}
+              onMouseLeave={() => setHoveredImg(null)}
+            />
+          </a>
+          <a href="https://pk.linkedin.com/in/asadsynt">
+            <img
+              src={
+                hoveredImg === "linkedin"
+                  ? "linkedin-hover.svg"
+                  : "linkedin.svg"
+              }
+              alt="Linked In"
+              role="button"
+              className="opacity-45 hover:opacity-100 icon_hover size-5 600:size-6  "
+              onMouseOver={() => setHoveredImg("linkedin")}
+              onMouseLeave={() => setHoveredImg(null)}
+            />
+          </a>
         </div>
         <div className="flex gap-4 text-[#ffffff6e]">
           <p

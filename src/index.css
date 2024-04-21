@@ -4,21 +4,22 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("fonts/Inter/Inter-Regular-400.otf") format("opentype");
+  src: url("assets/fonts/Inter/Inter-Regular-400.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Monument";
-  src: url("fonts/Monument/MonumentExtended-Regular.otf") format("opentype");
+  src: url("assets/fonts/Monument/MonumentExtended-Regular.otf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Vanguard";
-  src: url("fonts/Vanguard/Fontspring-DEMO-vanguardcf-heavy.otf")
+  src: url("assets/fonts/Vanguard/Fontspring-DEMO-vanguardcf-heavy.otf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -158,14 +159,6 @@ button {
 
 .input_custom:focus {
   border-bottom: 1px solid #9f9fa2;
-}
-
-.slides {
-  animation: animateLeft 100s linear infinite;
-}
-
-.slides:hover {
-  animation-play-state: paused;
 }
 
 .stat_number {
