@@ -31,7 +31,7 @@ function Contact() {
     }
   };
   return (
-    <section className="mt-48" id="contact">
+    <section className="mt-36 md:mt-48 relative " id="contact">
       <SectionHeading vanguard="CONTACT ME">SEND ME EMAIL</SectionHeading>
       <img
         src="glow.webp"

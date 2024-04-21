@@ -70,7 +70,7 @@ function Hero() {
         </div>
 
         <div className="flex justify-around">
-          <div className="scale-[0.5] 600:scale-[0.6] md:scale-[0.8] lg:scale-[1] z-10">
+          <div className="scale-[0.4] 600:scale-[0.5] md:scale-[0.7] lg:scale-[1] z-10">
             <Button type="secondary" onClick={() => scroller("portfolio")}>
               View Portfolio
             </Button>
@@ -78,7 +78,7 @@ function Hero() {
           <img
             src="asad.png"
             alt="Asad Synt"
-            className="absolute translate-y-[-42%] w-[58vw]"
+            className="absolute translate-y-[-23%] 600:translate-y-[-42%] w-[72vw] 600:w-[58vw]"
             loading="eager"
           />
           <img
@@ -87,7 +87,7 @@ function Hero() {
             className="absolute -translate-y-1/2 -z-10"
             loading="eager"
           />
-          <div className="scale-[0.5] 600:scale-[0.6] md:scale-[0.8] lg:scale-[1] z-10">
+          <div className="scale-[0.4] 600:scale-[0.5] md:scale-[0.7] lg:scale-[1] z-10">
             <Button type="secondary" onClick={() => scroller("contact")}>
               Get in touch
             </Button>

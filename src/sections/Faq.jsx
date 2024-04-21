@@ -32,7 +32,7 @@ const fakeData = [
 function Faq() {
   const [activeIndex, setActiveIndex] = useState(null);
   return (
-    <section className="relative mt-80">
+    <section className="relative mt-48  md:mt-80">
       <SectionHeading vanguard="F.A.Q">FREQ. ASKED QUES.</SectionHeading>
       <img
         src="glow.webp"

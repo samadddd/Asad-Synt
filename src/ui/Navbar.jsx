@@ -9,12 +9,12 @@ function Navbar({ setShowMenu }) {
   return (
     <nav className="mx_custom my-[30px] flex justify-between ">
       <div className="flex items-center">
-        <img src="logo.webp" alt="Logo" className="w-[10vw]" />
+        <img src="logo.webp" alt="Logo" className="w-20 md:w-24 lg:w-[10vw]" />
       </div>
       <img
         src="hamburger.svg"
         alt="Menu"
-        className="block lg:hidden w-[3vw]"
+        className="block lg:hidden w-8"
         role="button"
         onClick={() => setShowMenu(true)}
       />

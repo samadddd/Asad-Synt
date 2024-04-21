@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
-import Modal from "../ui/Modal";
 
 const fakeData = new Array(20)
   .fill(undefined)
@@ -12,8 +11,7 @@ const fakeData = new Array(20)
 function Portfolio() {
   return (
     <>
-      {/* <Modal /> */}
-      <section className="mt-64" id="portfolio">
+      <section className="mt-36 md:mt-64" id="portfolio">
         <SectionHeading vanguard="PORTFOLIO">UI/UX DESIGNING</SectionHeading>
         <img
           src="glow.webp"

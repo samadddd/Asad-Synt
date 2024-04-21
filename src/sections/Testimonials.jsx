@@ -75,7 +75,7 @@ const fakeReviews = [...fakeData, ...fakeData];
 
 function Testimonials() {
   return (
-    <section className="mt-60 relative">
+    <section className="mt-36 md:mt-60 relative">
       <SectionHeading vanguard="TESTIMONIALS">WHAT CLIENT SAYS?</SectionHeading>
       <img
         src="glow.webp"
