@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("assets/assets/fonts/Inter/Inter-Regular-400.otf") format("opentype");
+  src: url("/assets/fonts/Inter/Inter-Regular-400.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Monument";
-  src: url("assets/assets/fonts/Monument/MonumentExtended-Regular.otf")
+  src: url("/assets/fonts/Monument/MonumentExtended-Regular.otf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "Vanguard";
-  src: url("assets/assets/fonts/Vanguard/Fontspring-DEMO-vanguardcf-heavy.otf")
+  src: url("/assets/fonts/Vanguard/Fontspring-DEMO-vanguardcf-heavy.otf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
