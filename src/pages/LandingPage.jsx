@@ -1,8 +1,8 @@
 import { lazy, useState } from "react";
 
-import Hero from "../sections/Hero";
-import Navbar from "../ui/Navbar";
-import Menu from "../ui/Menu";
+const Hero = lazy(() => import("../sections/Hero"));
+const Navbar = lazy(() => import("../ui/Navbar"));
+const Menu = lazy(() => import("../ui/Menu"));
 const About = lazy(() => import("../sections/About"));
 const Portfolio = lazy(() => import("../sections/Portfolio"));
 const Testimonials = lazy(() => import("../sections/Testimonials"));
