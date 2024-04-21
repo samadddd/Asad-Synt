@@ -11,22 +11,24 @@ function Contact() {
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
-    const res = await fetch(
-      "https://sheet.best/api/sheets/147d0fc1-694d-46a7-8fab-f8baa0d92f2d",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }
-    );
-    setIsSubmitting(false);
     reset();
-    if (res.status === 200) {
-      return toast.success("Soon you'll be contacted!");
+    try {
+      const res = await fetch(
+        "https://sheet.best/api/sheets/147d0fc1-694d-46a7-8fab-f8baa0d92f2d",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      res.ok && toast.error("Soon, You'll be contacted");
+    } catch (err) {
+      toast.error("Error sending email");
+    } finally {
+      setIsSubmitting(false);
     }
-    return toast.error("Something went wrong!");
   };
   return (
     <section className="mt-48" id="contact">

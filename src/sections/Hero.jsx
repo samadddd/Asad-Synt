@@ -76,9 +76,9 @@ function Hero() {
             </Button>
           </div>
           <img
-            src="asad.webp"
+            src="asad.png"
             alt="Asad Synt"
-            className="absolute translate-y-[-34%] w-[58vw]"
+            className="absolute translate-y-[-42%] w-[58vw]"
             loading="eager"
           />
           <img

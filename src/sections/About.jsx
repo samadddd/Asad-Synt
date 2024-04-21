@@ -32,7 +32,7 @@ function About() {
       <SectionHeading vanguard="ABOUT ME">WHO AM I?</SectionHeading>
       <div className="flex justify-center">
         <img
-          src="glow.svg"
+          src="glow.webp"
           alt="Glow"
           className="absolute left-0 translate-x-[-70%] translate-y-[-50%]"
         />
@@ -48,7 +48,7 @@ function About() {
           <Stat key={index} {...stat} index={index} />
         ))}
         <img
-          src="glow.svg"
+          src="glow.webp"
           alt="Glow effect"
           className="absolute right-0 translate-x-[70%] translate-y-[-70%]"
         />
